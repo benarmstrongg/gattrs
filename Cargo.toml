@@ -1,0 +1,14 @@
+[package]
+name = "amby-server"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "amby_server"
+path = "src/lib.rs"
+
+[dependencies]
+async-trait = "0.1.56"
+zbus = { version = "2.2.0", default-features = false, features = ["tokio"] }
+macros = { path = "../amby-gatt-macros" }
+derivative = "2.2.0"
