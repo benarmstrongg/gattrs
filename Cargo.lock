@@ -12,16 +12,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "amby-server"
-version = "0.1.0"
-dependencies = [
- "async-trait",
- "derivative",
- "macros",
- "zbus",
-]
-
-[[package]]
 name = "async-broadcast"
 version = "0.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -266,6 +256,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "gattrs"
+version = "0.1.0"
+dependencies = [
+ "async-trait",
+ "derivative",
+ "macros",
+ "zbus",
+]
+
+[[package]]
 name = "getrandom"
 version = "0.2.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -325,6 +325,7 @@ dependencies = [
 [[package]]
 name = "macros"
 version = "0.1.0"
+source = "git+https://github.com/benarmstrongg/gattrs_macros.git#b3fe1df6c7a15ef13185090bccd43bd99df17b4b"
 dependencies = [
  "proc-macro2",
  "quote",

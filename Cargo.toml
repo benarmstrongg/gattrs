@@ -1,5 +1,5 @@
 [package]
-name = "amby-server"
+name = "gattrs"
 version = "0.1.0"
 edition = "2021"
 
