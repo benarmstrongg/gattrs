@@ -10,5 +10,5 @@ path = "src/lib.rs"
 [dependencies]
 async-trait = "0.1.56"
 zbus = { version = "2.2.0", default-features = false, features = ["tokio"] }
-macros = { git = "https://github.com/benarmstrongg/gattrs_macros.git" }
+macros = { git = "https://github.com/benarmstrongg/gattrs_macros.git", branch = "main" }
 derivative = "2.2.0"
