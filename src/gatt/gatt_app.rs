@@ -34,9 +34,7 @@ impl GattApplication {
 
     pub async fn service(mut self, service: impl ServiceRegister) -> Self {
         self.service_uuids.push(service.get_uuid());
-        let service_path = service.get_path(self.path.clone());
         let _res = service.register(self.bus.clone(), self.path.clone()).await;
-        println!("GATT service {} registered", &service_path);
         self
     }
 
@@ -64,7 +62,6 @@ impl GattApplication {
             .at(self.path.clone(), object_manager)
             .await?;
         // todo! handle error
-        println!("Object manager registered");
         Ok(())
     }
 
@@ -74,7 +71,6 @@ impl GattApplication {
             .register_application(self.path.clone(), HashMap::new())
             .await;
         // todo! handle error
-        println!("GATT application registered at {}", &self.path);
         res
     }
 
@@ -90,7 +86,6 @@ impl GattApplication {
             let res = ad_manager
                 .register_advertisement(self.path.clone(), HashMap::new())
                 .await;
-            println!("Advertisement registered at {}", &self.path);
             return res;
         }
         Ok(())
