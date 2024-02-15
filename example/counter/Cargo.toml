@@ -1,0 +1,12 @@
+[package]
+name = "gattrs_counter"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# gattrs = { git = "https://github.com/benarmstrongg/gattrs.git", branch = "main" }
+gattrs = { path = "../../" }
+zbus = { version = "2.2.0", default-features = false }
+tokio = { version = "1", features = ["full"] }
