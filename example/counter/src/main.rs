@@ -27,7 +27,6 @@ impl CountCharacteristic {
 
     async fn write(&mut self, val: &[u8]) -> gattrs::GattWriteResult {
         let count = val.first().unwrap_or(&self.count).to_owned();
-        self.value = [count].to_vec();
         self.count = count;
         Ok(())
     }
