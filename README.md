@@ -133,7 +133,6 @@ The `GattApplication` struct's builder methods can then be used to register serv
 GattApplication::new()
     // Set path
     .path("/MyApp")
-    .await
     // Register services
     .service(MyService1::default())
     .await
