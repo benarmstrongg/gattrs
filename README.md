@@ -24,7 +24,7 @@ tokio = { version = "1", features = ["full"] }
 
 A GATT application must expose at least one service containing at least one characteristic. The proc macros `gatt_characteristic` and `gatt_service` add the methods required for D-Bus interfaces `org.bluez.GattCharacteristic1` and `org.bluez.GattService1`. Services and characteristics require UUIDs to identify themselves to client devices.
 
-See [example directory](https://github.com/benarmstrongg/gattrs/tree/main/example/counter) for full code examples.
+See [example directory](https://github.com/benarmstrongg/gattrs/tree/main/example) for full code examples.
 
 ### Characteristics
 
