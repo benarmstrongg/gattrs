@@ -42,8 +42,5 @@ async fn main() -> gattrs::zbus::Result<()> {
         .serve()
         .await?;
 
-    let session_bus = zbus::Connection::session().await.unwrap();
-    GattApplication::on_bus(session_bus);
-
     Ok(())
 }
