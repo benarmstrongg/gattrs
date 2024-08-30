@@ -4,7 +4,7 @@ pub mod gatt;
 
 // types exports
 mod types;
-pub use types::{GattReadResult, GattWriteResult};
+pub use types::{GattReadResult, GattResult, GattWriteResult};
 
 // macros re-export
 pub use macros::{gatt_characteristic, gatt_service};

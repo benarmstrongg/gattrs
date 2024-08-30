@@ -33,7 +33,7 @@ impl CountCharacteristic {
 }
 
 #[tokio::main]
-async fn main() -> gattrs::zbus::Result<()> {
+async fn main() -> gattrs::GattResult<()> {
     GattApplication::new()
         .await
         .service(CounterService::default())

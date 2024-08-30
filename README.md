@@ -84,7 +84,7 @@ Characteristics with the `notify` flag don't need to declare any special methods
 struct CountCharacteristic {}
 
 impl CountCharacteristic {
-    async fn hello(&mut self) -> zbus::fdo::Result<()> {
+    async fn hello(&mut self) -> gattrs::GattResult<()> {
         self.value = "hello world".as_bytes().to_vec();
         self.notify()
     }
